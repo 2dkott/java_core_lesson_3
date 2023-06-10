@@ -5,8 +5,8 @@ public class Payment {
 
     private final Currency currency;
 
-    public Payment(double salary, Currency currency) {
-        this.amount = salary;
+    public Payment(double amount, Currency currency) {
+        this.amount = amount;
         this.currency = currency;
     }
 
@@ -16,5 +16,10 @@ public class Payment {
 
     public Currency getCurrency() {
         return currency;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s %s", amount, currency);
     }
 }
